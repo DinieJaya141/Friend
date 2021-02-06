@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<!--
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user_id %>
+</p>
+-->
+
+<div class="card border-dark mb-3">
+<div class="card-header"><h1><%= @post.title %></h1></div>
+<div class="card-body text-dark">
+  <h4>Made by User ID: <%= @post.user_id %> || Posted on: <%= @post.updated_at %></h4>
+  <h5></h5>
+  <p><%= @post.content %></p>
+</div>
+</div>
+
+<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-secondary" %>
+<%= link_to 'Back', posts_path, class:"btn btn-secondary" %>
